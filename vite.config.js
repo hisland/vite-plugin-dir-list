@@ -1,9 +1,9 @@
-// @ts-check
-const dirListPlugin = require('./vite-plugin-dir-list.js')
+import dirListPlugin from './vite2-plugin-dir-list.js'
 
-const config = {
-  port: 3001,
-  plugins: [dirListPlugin],
+/**
+ * https://vitejs.dev/config/
+ * @type { import('vite').UserConfig }
+ */
+export default {
+  plugins: [dirListPlugin()],
 }
-
-module.exports = config
