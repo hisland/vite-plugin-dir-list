@@ -12,14 +12,14 @@ function genDirListHtml(list) {
   </ul>`
 }
 
-module.exports = function dirListPlugin(rootPath) {
+module.exports = function dirListPlugin() {
   return {
     name: 'vite-plugin-dir-list',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         const { url } = req
         if (url.endsWith('/')) {
-          const pwd = path.join(rootPath, url)
+          const pwd = path.join(process.cwd(), url)
           const list1 = fs.readdirSync(pwd, {
             withFileTypes: true,
           })
