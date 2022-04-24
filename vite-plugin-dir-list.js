@@ -12,7 +12,7 @@ function genDirListHtml(list) {
   </ul>`
 }
 
-export default function dirListPlugin() {
+module.exports = function dirListPlugin() {
   return {
     name: 'vite-plugin-dir-list',
     configureServer(server) {
