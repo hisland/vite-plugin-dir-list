@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-dir-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vite2 list files",
   "main": "vite-plugin-dir-list.js",
   "scripts": {},
