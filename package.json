@@ -1,16 +1,21 @@
 {
-  "name": "vue3-use-vite",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+  "name": "vite-plugin-dir-list",
+  "version": "1.0.0",
+  "description": "vite2 list files",
+  "main": "vite-plugin-dir-list.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisland/vite-plugin-dir-list.git"
   },
-  "dependencies": {
-    "vue": "^3.0.4"
+  "keywords": [
+    "vite2",
+    "list files"
+  ],
+  "author": "hisland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisland/vite-plugin-dir-list/issues"
   },
-  "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.4",
-    "sass": "^1.30.0",
-    "vite": "^2.0.0-beta.50"
-  }
+  "homepage": "https://github.com/hisland/vite-plugin-dir-list#readme"
 }

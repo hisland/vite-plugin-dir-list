@@ -14,9 +14,9 @@ function genDirListHtml(list) {
 
 export default function dirListPlugin() {
   return {
-    name: 'vite2-plugin-dir-list',
-    configureServer({ app }) {
-      app.use((req, res, next) => {
+    name: 'vite-plugin-dir-list',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
         const { url } = req
         if (url.endsWith('/')) {
           const pwd = path.join(__dirname, url)
@@ -26,7 +26,9 @@ export default function dirListPlugin() {
 
           const hasIndex = list1.some((vv) => vv.name === 'index.html')
           if (hasIndex) {
-            res.end(fs.readFileSync(path.join(pwd, 'index.html'), 'utf8'))
+            res.writeHead(301, { Location: 'index.html' })
+            res.end()
+            // res.end(fs.readFileSync(path.join(pwd, 'index.html'), 'utf8'))
           } else {
             const list2 = list1.map((file) => {
               if (file.isDirectory()) {
